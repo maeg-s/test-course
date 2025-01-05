@@ -1,0 +1,86 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    /* height: 100vh; */
+    background: linear-gradient(135deg, #96afcd, #7392ba, #5175a7);
+    margin: 0;
+}
+
+main {
+    margin-top: 25vh;
+    min-height: calc(75vh - 100px);
+    padding-bottom: 100px;
+    width: 55vw;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button-group button {
+    margin: 10px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: #0147AB;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-group button:hover {
+    background-color: #1035ac;
+}
+
+.button-group button:active {
+    transform: scale(0.95);
+}
+
+#addManualFlashcard,
+#generateAIFlashcards,
+.saveBtn,
+.gotoBtn {
+    padding: 8px 18px; /* Smaller padding */
+    font-size: 0.9em; /* Smaller font size */
+    margin: 8px;
+    background-color: #87cdee;
+}
+
+#addManualFlashcard:hover,
+#generateAIFlashcards:hover,
+.saveBtn:hover,
+.gotoBtn:hover {
+    background-color: #57a0d3;
+}
+
+#addManualFlashcard:active,
+#generateAIFlashcards:active {
+    transform: scale(0.95);
+}
+
+.section {
+    margin-top: 20px; 
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    text-align: center; 
+}
+
+input {
+    margin-right: 10px;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

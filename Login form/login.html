@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "en" and dir ="ltr">
+<head>
+    <!--Information about character set and title -->
+    <meta charset = "utf-8">
+    <title>Login Form</title>
+    <!--This is the link to the external CSS file associated with the login form-->
+    <link rel = "stylesheet" href = "style1.css">
+</head>
+<body>
+    <!--The container that holds the Register form and Login form-->
+     <div class = "main">
+        <!--This won't be visible on the screen but it helps with which form the user sees -->
+        <input type = "checkbox" id = "chk" aria-hidden = "true">
+        
+        <!--Register form container with details the user needs to enter, visible when first loading the page by default-->
+        <div class = "register">
+            <form>
+                <!--This toggles visibility of the register form, when login pressed the register form won't be visible-->
+                <label for = "chk" aria-hidden = "true">Register</label>
+                <!--Register details that need to be entered-->
+                <input id = "username" type = "text" name = "" placeholder = "Enter username" required="">
+                <input id = "email" type = "email" name = "" placeholder = "Enter email" required="">
+                <input id = "password" type = "password" name = "" placeholder = "Enter password" required="">
+                <!--Displays the password requirements-->
+                <div id="requirements" class="password-requirements">
+                    <p class="requirement" id="length">Min. 8 characters</p>
+                    <p class="requirement" id="lowercase">Include lowercase letter</p>
+                    <p class="requirement" id="uppercase">Include uppercase letter</p>
+                    <p class="requirement" id="number">Include number</p>
+                    <p class="requirement" id="characters">Include a special character: #.?!@$%^&*-</p>
+                  </div>
+                  
+                  
+                <!-- Confirm Password Input Field -->
+                <input id = "confirm-password" type="password" name="" placeholder="Confirm password" required="">
+                <!-- If the password and confirm password inputs don't match this will display the error-->
+                <div class="password-requirements">
+                    <p class="requirement hidden error" id="match">Passwords must match</p>
+                </div>
+                <!--Register button that is initially disabled until all fields are filled-->
+                <button id = "submit" type = "submit" disabled>Register</button>
+
+            </form>
+        </div>
+        <!--Login form container to sign-into the website-->
+        <div class = "login">
+            <form>
+                <!--Toggles visibility of login form similar to register form-->
+                <label for = "chk" aria-hidden = "true">Login</label>
+                <!--Login details that need to be entered-->
+                <input id = "loginemail" type = "email" name = "" placeholder = "Enter email" required="">
+                <input id = "loginpassword" type = "password" name = "" placeholder = "Enter password" required="">
+                <button type = "submit">Login</button>
+            </form>
+        </div>
+     </div>
+</body>
+<!--This connects the external javascript form associated with the html form to handle interactions and validation-->
+<script type = "module" src = "login.js"></script>
+</html>

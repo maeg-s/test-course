@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Flashcards</title>
+        <link rel="stylesheet" href="flashcards-c.css">
+    </head>
+    <body>
+        <main>
+            <h1>Flashcard Creation</h1>
+        
+            <div class="button-group">
+                <button id="manualButton">Create yourself</button>
+                <button id="aiButton">Generate from upload</button>
+        </div>
+        
+        <div class="section" id="manualSection" style="display: none;">
+            <h2>Create yourself</h2>
+            <input type="text" id="manualQuestion" placeholder="Enter question" required>
+            <input type="text" id="manualAnswer" placeholder="Enter answer" required>
+            <button id="addManualFlashcard">Add flashcard</button>
+            <div id="manualFlashcardDisplay"></div>
+
+            <button class="saveBtn" id="saveManualSet">Save Set</button>
+            <button class="gotoBtn" id="gotoManualSet" style="display: none;">Go to Set</button>
+
+        </div>
+    
+        <div class="section" id="aiSection" style="display: none;">
+            <h2>Generate from upload</h2>
+            <input type="text" id="aiPrompt" placeholder="Enter notes for AI flashcards" required>
+            <button id="generateAIFlashcards">Generate</button>
+            <div id="aiFlashcardDisplay"></div>
+
+            <button class="saveBtn" id="saveAISet">Save Set</button>
+            <button class="gotoBtn" id="gotoAISet" style="display: none;">Go to Set</button>
+        </div>
+        </main>
+        
+
+    <script src="flashcards-c.js"></script>
+    <script src="flashcards-c-firebase.js" type="module"></script>
+</body>
+</html>

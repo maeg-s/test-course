@@ -1,0 +1,162 @@
+/*Baic styling for the entire body layout to start with*/
+body{
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, #ccb3a3, #d6b79c, #ddbc93, #e1c28b, #e1ca82);
+    min-height: 100vh;
+}
+/*Styling fir the main container that holds both the register and login form*/  
+.main{
+    width: 350px;
+    height: 500px;
+    background: cornsilk;
+    overflow: hidden;
+    background: url(background.jpg.jpg) no-repeat center / cover;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px white; /*Adds a shadow sort of effect to the container*/
+    padding: 20px;
+
+}
+/*The checkbox which is hidden used to switch between the register and login forms*/
+#chk{
+    display: none;
+}
+/*The register form container*/
+.register {
+    position: relative;
+    padding-bottom: 50px;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+/*Allows for password requirements to be evenly spaced in the register form container*/
+.password-requirements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 8px 0;
+    margin-top: 10px
+}
+/*How each individual password requirement is styled*/
+.requirement {
+    flex: 1 0 50%;
+    font-size: 12px;
+    margin: 5px 0;
+    display: flex;
+    text-align: left;
+}
+/*The little emojis for unmet requirements*/
+.requirement::before {
+    content: '\2639'; /* Unicode character for "Warning" */
+    padding-right: 5px;
+    font-size: 1.2em;
+    position: relative;
+    top: .1em;
+}
+/*Default styling for the unmet requirements*/
+.requirement:not(.valid) {
+    color: #1b1919; /* Greyish black for unmet requirements */
+}
+/* Styling for met requirements*/
+.requirement.valid {
+    color: #3a9c3d; /* Green for met requirements */
+}
+/*icons for met requirements*/
+.requirement.valid:before {
+    content: '\263A'; /* Unicode character for "Smiley Face" */
+}
+/*Styling for error in the password requirements*/
+.requirement.error {
+    color: red; /* Red for errors */
+}
+/*The icon for errors - another emoji*/
+.requirement.error::before {
+    content: '\2639'; /* Frowning face when invalid */
+}
+/* Hides elements so that the contents of one form do not affect the other*/
+.hidden {
+    display: none;
+}
+/*Styling for Register and Login labels*/
+label{
+    color: cornsilk;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex; /*Centers the label*/
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out; /*Transition - makes it smooth*/
+
+}
+/*Input field styling on both forms*/
+input{
+    width: 60%;
+    height: 18%;
+    background: cornsilk;
+    justify-content: center;
+    display: flex; /*Allows the containers to be dynamic and sit the container*/
+    margin: 10px auto;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 5px; /*Rounds the corners of the input boxes*/
+}
+/*This styles the buttons for both forms*/
+button{
+    width: 80px;
+    height: 40px;
+    margin: 20px auto; /*Centers the button and adds space*/
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center; /*Centers the button text*/
+    display: block; 
+    color: white;
+    background: #ccb3a3;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in-out;/*Smooth transition when hovered over*/
+    cursor: pointer;
+}
+/*The effect of hover on the button*/
+button:hover{
+    background: #332314; /*It darkerns the button background on hover*/
+}
+/*Login form styling*/
+.login{
+    height: 460px;
+    width: 100%;
+    max-width: 600px;
+    background: #5f7194;
+    border-radius: 60% / 10%; /*Gives the rounded shape to the login form*/
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+/*styling for the login label*/
+.login label{
+    color: cornsilk;
+    transform: scale(.6);
+}
+/*When the checkbox is checked, the login form is moved fully into view*/
+#chk:checked ~ .login{
+    transform: translateY(-520px);
+}
+/*Makes the login label larger when the checkbox is checked*/
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+/*Decreases the size of the register label so login is more focused*/
+#chk:checked ~ .register label{
+    transform: scale(.6);
+}
