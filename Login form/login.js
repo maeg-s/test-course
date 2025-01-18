@@ -141,6 +141,7 @@ function login(emailValue, passwordValue) {
         .then(() => {
         alert("Logged in successfully!");//Shows that the user has logged in successfully
         //in the future i will redirect to another page from here.
+        window.location.href = "/homepage/homepage.html";
     })
     .catch((error) => {
         alert("Error logging in: " + error.message);//error shown if updating the last-logged in fails
