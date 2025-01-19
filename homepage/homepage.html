@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="homepage.css"> <!-- External CSS file -->
 </head>
 <body>
+    <!-- Header with logout button -->
+    <header>
+        <h1>Dashboard</h1>
+        <button class="logout-btn" onclick="window.location.href='../Login form/login.html'">Logout</button>
+    </header>
+
     <div class="cards-container">
         <!-- Flashcards Card -->
         <div class="card">
             <h2>Flashcards</h2>
             <p>Create and study flashcards for your learning.</p>
             <a href="../Flashcards/flashcards-c.html">Go to Flashcards</a>
-            <!-- <button onclick="window.location.href='..Flashcards/flashcards-c.html'">Go to Flashcards</button> -->
         </div>
 
         <!-- Pomodoro Timer Card -->
@@ -21,7 +26,6 @@
             <h2>Pomodoro Timer</h2>
             <p>Manage your time with the Pomodoro technique to stay productive.</p>
             <a href="../Pomodoro timer/pomodoro.html">Go to Pomodoro Timer</a>
-            <!-- <button onclick="window.location.href='..Pomodoro timer/pomodoro.html'">Start Timer</button> -->
         </div>
     </div>
 </body>

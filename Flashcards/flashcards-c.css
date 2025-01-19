@@ -9,6 +9,18 @@ body {
     margin: 0;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px; /* Reduced margin for better spacing */
+}
+
 main {
     margin-top: 25vh;
     min-height: calc(75vh - 100px);
@@ -20,6 +32,26 @@ main {
 h1 {
     text-align: center;
     margin-bottom: 20px;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.back-btn {
+    background-color: #009726;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 .button-group {

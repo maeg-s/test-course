@@ -1,4 +1,4 @@
-* { 
+/* * { 
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,22 +7,77 @@
 html, body {
     height: 100%;
     font-family: sans-serif;
-}
+} */
 
-.wrapper {
+/* .wrapper {
     position: relative;
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 15px;
-}
+} */
 
-body {
+/* body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+} */
+body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: flex-start; /* Align items at the top of the page */
+    flex-direction: column;
+    background: linear-gradient(135deg, #96afcd, #7392ba, #5175a7);
+    margin: 0;
+    min-height: 100vh; /* Ensure the body fills the entire viewport */
+    position: relative; /* Allow absolute positioning of the background */
+    justify-content: flex-start;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    width: 100%; /* Take full width of the screen */
+    max-width: 1000px; /* Limit the width for larger screens */
+    margin: 0 auto; /* Center horizontally */
+    z-index: 10; /* Ensure the header is on top of other elements */
+    position: relative; /* Keep it in normal document flow */
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.back-btn-container {
+    display: flex;  /* Use flexbox to center the back button */
+    justify-content: center;  /* Center horizontally */
+    width: 100%;  /* Take full width of the container */
+    margin-top: 20px;  /* Add some space between header and button */
+}
+
+.back-btn {
+    background-color: #009726;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2; /* Ensure it appears above the background */
+    text-decoration: none; /* Remove underline if it's a link */
 }
 
 #vista-bg {
@@ -31,5 +86,16 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure the background is behind the header */
+}
+
+main {
+    margin-top: 25vh;
+    min-height: calc(75vh - 100px);
+    padding-bottom: 100px;
+    width: 55vw;
+    text-align: left;
+    z-index: 2; /* Ensure the main content stays on top of the background */
 }
